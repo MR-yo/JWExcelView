@@ -1,10 +1,11 @@
 # JWExcelView
 
-轻量级表格控件,UITableView style。
+`Lightwight` `UITableView style`
 
-![Demo](http://owlvwomsh.bkt.clouddn.com/excel.gif)
+![Demo](http://owlvwomsh.bkt.clouddn.com/jwexcel.gif)
 
 # Usage
+---
 ```
 #pragma mark - buildView
 - (void)buildMainView
@@ -58,7 +59,17 @@
 }
 ```
 
+# Installation
+---
 
+### CocoaPods
+1. Add `pod 'JWExcelView'` to your Podfile.
+2. Run `pod install` or pod update.
+3. Import `<JWExcelView/JWExcelView.h>`.
 
+### Manually
+1. Download all the files in the JWExcelView subdirectory.
+2. Add the source files to your Xcode project.
+3. Import `JWExcelView.h`.
 
 
