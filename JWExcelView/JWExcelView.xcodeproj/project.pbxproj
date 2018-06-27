@@ -1,0 +1,608 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1A9F294220E36A6F00708E78 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9F294120E36A6F00708E78 /* AppDelegate.m */; };
+		1A9F294520E36A6F00708E78 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9F294420E36A6F00708E78 /* ViewController.m */; };
+		1A9F294820E36A6F00708E78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A9F294620E36A6F00708E78 /* Main.storyboard */; };
+		1A9F294A20E36A7000708E78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A9F294920E36A7000708E78 /* Assets.xcassets */; };
+		1A9F294D20E36A7000708E78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A9F294B20E36A7000708E78 /* LaunchScreen.storyboard */; };
+		1A9F295020E36A7000708E78 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9F294F20E36A7000708E78 /* main.m */; };
+		1A9F295A20E36A7000708E78 /* JWExcelViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9F295920E36A7000708E78 /* JWExcelViewTests.m */; };
+		1A9F296520E36A7000708E78 /* JWExcelViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9F296420E36A7000708E78 /* JWExcelViewUITests.m */; };
+		1A9F297720E36ABC00708E78 /* JWExcelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9F297520E36ABB00708E78 /* JWExcelView.m */; };
+		1A9F297820E36ABC00708E78 /* JWExcelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9F297620E36ABB00708E78 /* JWExcelCell.m */; };
+		1A9F297B20E36B1E00708E78 /* JPFPSStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9F297A20E36B1E00708E78 /* JPFPSStatus.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1A9F295620E36A7000708E78 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A9F293520E36A6F00708E78 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A9F293C20E36A6F00708E78;
+			remoteInfo = JWExcelView;
+		};
+		1A9F296120E36A7000708E78 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A9F293520E36A6F00708E78 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A9F293C20E36A6F00708E78;
+			remoteInfo = JWExcelView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1A9F293D20E36A6F00708E78 /* JWExcelView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWExcelView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A9F294020E36A6F00708E78 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1A9F294120E36A6F00708E78 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1A9F294320E36A6F00708E78 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1A9F294420E36A6F00708E78 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1A9F294720E36A6F00708E78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1A9F294920E36A7000708E78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1A9F294C20E36A7000708E78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1A9F294E20E36A7000708E78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A9F294F20E36A7000708E78 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1A9F295520E36A7000708E78 /* JWExcelViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JWExcelViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A9F295920E36A7000708E78 /* JWExcelViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWExcelViewTests.m; sourceTree = "<group>"; };
+		1A9F295B20E36A7000708E78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A9F296020E36A7000708E78 /* JWExcelViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JWExcelViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A9F296420E36A7000708E78 /* JWExcelViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWExcelViewUITests.m; sourceTree = "<group>"; };
+		1A9F296620E36A7000708E78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A9F297320E36ABB00708E78 /* JWExcelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWExcelView.h; sourceTree = "<group>"; };
+		1A9F297420E36ABB00708E78 /* JWExcelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWExcelCell.h; sourceTree = "<group>"; };
+		1A9F297520E36ABB00708E78 /* JWExcelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWExcelView.m; sourceTree = "<group>"; };
+		1A9F297620E36ABB00708E78 /* JWExcelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWExcelCell.m; sourceTree = "<group>"; };
+		1A9F297920E36B1E00708E78 /* JPFPSStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPFPSStatus.h; sourceTree = "<group>"; };
+		1A9F297A20E36B1E00708E78 /* JPFPSStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPFPSStatus.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1A9F293A20E36A6F00708E78 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A9F295220E36A7000708E78 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A9F295D20E36A7000708E78 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1A9F293420E36A6F00708E78 = {
+			isa = PBXGroup;
+			children = (
+				1A9F293F20E36A6F00708E78 /* JWExcelView */,
+				1A9F295820E36A7000708E78 /* JWExcelViewTests */,
+				1A9F296320E36A7000708E78 /* JWExcelViewUITests */,
+				1A9F293E20E36A6F00708E78 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1A9F293E20E36A6F00708E78 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1A9F293D20E36A6F00708E78 /* JWExcelView.app */,
+				1A9F295520E36A7000708E78 /* JWExcelViewTests.xctest */,
+				1A9F296020E36A7000708E78 /* JWExcelViewUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1A9F293F20E36A6F00708E78 /* JWExcelView */ = {
+			isa = PBXGroup;
+			children = (
+				1A9F297220E36ABB00708E78 /* JWExcelView */,
+				1A9F294020E36A6F00708E78 /* AppDelegate.h */,
+				1A9F294120E36A6F00708E78 /* AppDelegate.m */,
+				1A9F294320E36A6F00708E78 /* ViewController.h */,
+				1A9F294420E36A6F00708E78 /* ViewController.m */,
+				1A9F297920E36B1E00708E78 /* JPFPSStatus.h */,
+				1A9F297A20E36B1E00708E78 /* JPFPSStatus.m */,
+				1A9F294620E36A6F00708E78 /* Main.storyboard */,
+				1A9F294920E36A7000708E78 /* Assets.xcassets */,
+				1A9F294B20E36A7000708E78 /* LaunchScreen.storyboard */,
+				1A9F294E20E36A7000708E78 /* Info.plist */,
+				1A9F294F20E36A7000708E78 /* main.m */,
+			);
+			path = JWExcelView;
+			sourceTree = "<group>";
+		};
+		1A9F295820E36A7000708E78 /* JWExcelViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				1A9F295920E36A7000708E78 /* JWExcelViewTests.m */,
+				1A9F295B20E36A7000708E78 /* Info.plist */,
+			);
+			path = JWExcelViewTests;
+			sourceTree = "<group>";
+		};
+		1A9F296320E36A7000708E78 /* JWExcelViewUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1A9F296420E36A7000708E78 /* JWExcelViewUITests.m */,
+				1A9F296620E36A7000708E78 /* Info.plist */,
+			);
+			path = JWExcelViewUITests;
+			sourceTree = "<group>";
+		};
+		1A9F297220E36ABB00708E78 /* JWExcelView */ = {
+			isa = PBXGroup;
+			children = (
+				1A9F297320E36ABB00708E78 /* JWExcelView.h */,
+				1A9F297420E36ABB00708E78 /* JWExcelCell.h */,
+				1A9F297520E36ABB00708E78 /* JWExcelView.m */,
+				1A9F297620E36ABB00708E78 /* JWExcelCell.m */,
+			);
+			path = JWExcelView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1A9F293C20E36A6F00708E78 /* JWExcelView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A9F296920E36A7000708E78 /* Build configuration list for PBXNativeTarget "JWExcelView" */;
+			buildPhases = (
+				1A9F293920E36A6F00708E78 /* Sources */,
+				1A9F293A20E36A6F00708E78 /* Frameworks */,
+				1A9F293B20E36A6F00708E78 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JWExcelView;
+			productName = JWExcelView;
+			productReference = 1A9F293D20E36A6F00708E78 /* JWExcelView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1A9F295420E36A7000708E78 /* JWExcelViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A9F296C20E36A7000708E78 /* Build configuration list for PBXNativeTarget "JWExcelViewTests" */;
+			buildPhases = (
+				1A9F295120E36A7000708E78 /* Sources */,
+				1A9F295220E36A7000708E78 /* Frameworks */,
+				1A9F295320E36A7000708E78 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1A9F295720E36A7000708E78 /* PBXTargetDependency */,
+			);
+			name = JWExcelViewTests;
+			productName = JWExcelViewTests;
+			productReference = 1A9F295520E36A7000708E78 /* JWExcelViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1A9F295F20E36A7000708E78 /* JWExcelViewUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A9F296F20E36A7000708E78 /* Build configuration list for PBXNativeTarget "JWExcelViewUITests" */;
+			buildPhases = (
+				1A9F295C20E36A7000708E78 /* Sources */,
+				1A9F295D20E36A7000708E78 /* Frameworks */,
+				1A9F295E20E36A7000708E78 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1A9F296220E36A7000708E78 /* PBXTargetDependency */,
+			);
+			name = JWExcelViewUITests;
+			productName = JWExcelViewUITests;
+			productReference = 1A9F296020E36A7000708E78 /* JWExcelViewUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1A9F293520E36A6F00708E78 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "一只皮卡丘";
+				TargetAttributes = {
+					1A9F293C20E36A6F00708E78 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					1A9F295420E36A7000708E78 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 1A9F293C20E36A6F00708E78;
+					};
+					1A9F295F20E36A7000708E78 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 1A9F293C20E36A6F00708E78;
+					};
+				};
+			};
+			buildConfigurationList = 1A9F293820E36A6F00708E78 /* Build configuration list for PBXProject "JWExcelView" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1A9F293420E36A6F00708E78;
+			productRefGroup = 1A9F293E20E36A6F00708E78 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1A9F293C20E36A6F00708E78 /* JWExcelView */,
+				1A9F295420E36A7000708E78 /* JWExcelViewTests */,
+				1A9F295F20E36A7000708E78 /* JWExcelViewUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1A9F293B20E36A6F00708E78 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A9F294D20E36A7000708E78 /* LaunchScreen.storyboard in Resources */,
+				1A9F294A20E36A7000708E78 /* Assets.xcassets in Resources */,
+				1A9F294820E36A6F00708E78 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A9F295320E36A7000708E78 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A9F295E20E36A7000708E78 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1A9F293920E36A6F00708E78 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A9F294520E36A6F00708E78 /* ViewController.m in Sources */,
+				1A9F297720E36ABC00708E78 /* JWExcelView.m in Sources */,
+				1A9F295020E36A7000708E78 /* main.m in Sources */,
+				1A9F294220E36A6F00708E78 /* AppDelegate.m in Sources */,
+				1A9F297820E36ABC00708E78 /* JWExcelCell.m in Sources */,
+				1A9F297B20E36B1E00708E78 /* JPFPSStatus.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A9F295120E36A7000708E78 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A9F295A20E36A7000708E78 /* JWExcelViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A9F295C20E36A7000708E78 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A9F296520E36A7000708E78 /* JWExcelViewUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1A9F295720E36A7000708E78 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1A9F293C20E36A6F00708E78 /* JWExcelView */;
+			targetProxy = 1A9F295620E36A7000708E78 /* PBXContainerItemProxy */;
+		};
+		1A9F296220E36A7000708E78 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1A9F293C20E36A6F00708E78 /* JWExcelView */;
+			targetProxy = 1A9F296120E36A7000708E78 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1A9F294620E36A6F00708E78 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1A9F294720E36A6F00708E78 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1A9F294B20E36A7000708E78 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1A9F294C20E36A7000708E78 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1A9F296720E36A7000708E78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1A9F296820E36A7000708E78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1A9F296A20E36A7000708E78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YRYEE3SXZ2;
+				INFOPLIST_FILE = JWExcelView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-----.JWExcelView";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1A9F296B20E36A7000708E78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YRYEE3SXZ2;
+				INFOPLIST_FILE = JWExcelView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-----.JWExcelView";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1A9F296D20E36A7000708E78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YRYEE3SXZ2;
+				INFOPLIST_FILE = JWExcelViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-----.JWExcelViewTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JWExcelView.app/JWExcelView";
+			};
+			name = Debug;
+		};
+		1A9F296E20E36A7000708E78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YRYEE3SXZ2;
+				INFOPLIST_FILE = JWExcelViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-----.JWExcelViewTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JWExcelView.app/JWExcelView";
+			};
+			name = Release;
+		};
+		1A9F297020E36A7000708E78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YRYEE3SXZ2;
+				INFOPLIST_FILE = JWExcelViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-----.JWExcelViewUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JWExcelView;
+			};
+			name = Debug;
+		};
+		1A9F297120E36A7000708E78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YRYEE3SXZ2;
+				INFOPLIST_FILE = JWExcelViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-----.JWExcelViewUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JWExcelView;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1A9F293820E36A6F00708E78 /* Build configuration list for PBXProject "JWExcelView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A9F296720E36A7000708E78 /* Debug */,
+				1A9F296820E36A7000708E78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A9F296920E36A7000708E78 /* Build configuration list for PBXNativeTarget "JWExcelView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A9F296A20E36A7000708E78 /* Debug */,
+				1A9F296B20E36A7000708E78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A9F296C20E36A7000708E78 /* Build configuration list for PBXNativeTarget "JWExcelViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A9F296D20E36A7000708E78 /* Debug */,
+				1A9F296E20E36A7000708E78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A9F296F20E36A7000708E78 /* Build configuration list for PBXNativeTarget "JWExcelViewUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A9F297020E36A7000708E78 /* Debug */,
+				1A9F297120E36A7000708E78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1A9F293520E36A6F00708E78 /* Project object */;
+}
