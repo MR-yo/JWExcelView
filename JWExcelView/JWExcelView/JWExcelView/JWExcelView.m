@@ -13,8 +13,6 @@
     NSMutableDictionary *_cachedCells;
     NSMutableSet *_reusableCells;
     NSMutableSet *_newVisibleCells;
-    CGFloat _visibleRowCount;
-    CGFloat _visibleSectionCount;
     CGPoint _lastContentOffset;
     BOOL  _needsReload;
 
