@@ -148,8 +148,8 @@
 			isa = PBXGroup;
 			children = (
 				1A9F297320E36ABB00708E78 /* JWExcelView.h */,
-				1A9F297420E36ABB00708E78 /* JWExcelCell.h */,
 				1A9F297520E36ABB00708E78 /* JWExcelView.m */,
+				1A9F297420E36ABB00708E78 /* JWExcelCell.h */,
 				1A9F297620E36ABB00708E78 /* JWExcelCell.m */,
 			);
 			path = JWExcelView;
