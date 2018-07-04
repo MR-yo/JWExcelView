@@ -14,8 +14,10 @@
     NSMutableSet *_reusableCells;
     NSMutableSet *_newVisibleCells;
     CGPoint _lastContentOffset;
-    BOOL  _needsReload;
-
+    CGFloat _nextWidth;
+    CGFloat _nextHeight;
+    BOOL    _needsReload;
+ 
     struct {
         unsigned jwExcelCellForIndexPath: 1;
         unsigned numberOfSectionsInExcelView : 1;
@@ -109,8 +111,8 @@ const CGFloat _defaultRowWidth = 60;
         NSInteger section = originIndexPath.section;
         CGFloat originW = _lastContentOffset.x;
         CGFloat originH = _lastContentOffset.y;
-        CGFloat visibleW = MIN(self.frame.size.width, self.contentSize.width) + originW;
-        CGFloat visibleH = MIN(self.frame.size.height, self.contentSize.height) + originH;
+        CGFloat visibleW = MIN(self.frame.size.width, self.contentSize.width) + originW + _nextWidth;
+        CGFloat visibleH = MIN(self.frame.size.height, self.contentSize.height) + originH + _nextHeight;
         
         while (originH < visibleH || originW < visibleW) {
             
@@ -127,7 +129,6 @@ const CGFloat _defaultRowWidth = 60;
                 [self addSubview:cell];
                 // cache cell
                 [_cachedCells setObject:cell forKey:indexPath];
-                NSLog(@"cell.frame = %@",NSStringFromCGRect(cell.frame));
             }else{
                 JWExcelCell *cell = [_cachedCells objectForKey:indexPath];
                 currentH = cell.frame.size.height;
@@ -175,11 +176,15 @@ const CGFloat _defaultRowWidth = 60;
     return nil;
 }
 
-#pragma mark - 重新布局
+#pragma mark - layout
 - (void)layoutSubviews
 {
-    // visibleBounds
-    const CGRect visibleBounds = CGRectMake(self.contentOffset.x,self.contentOffset.y,self.bounds.size.width,self.bounds.size.height);
+    // visibleBounds need bigger than show view, otherwise, the scroll view will show empty.
+    // but I let the item width and height control by delegate, get next item width has a little trouble.
+    _nextWidth = _dataSourceDefault.widthOfRowsAtIndexPath ? _defaultRowWidth : [self.excelDataSource jwExcelView:self widthOfRowsAtIndexPath:[self getOriginIndexPath:CGPointMake(self.contentOffset.x + self.bounds.size.width, self.contentOffset.y)]];
+    _nextHeight = _dataSourceDefault.heightForSectionsAtIndexPath ? _defaultSectionHeight : [self.excelDataSource jwExcelView:self heightForSectionsAtIndexPath:[self getOriginIndexPath:CGPointMake(self.contentOffset.x, self.contentOffset.y + self.bounds.size.height)]];
+    
+    const CGRect visibleBounds = CGRectMake(self.contentOffset.x,self.contentOffset.y,self.bounds.size.width + _nextWidth,self.bounds.size.height + _nextHeight);
     
     // remove cell whitch out of visibleBounds from superview, and put it to _reusableCells if it has reuseIdentifier
     for (JWExcelCell *cell in _cachedCells.allValues) {
@@ -192,7 +197,7 @@ const CGFloat _defaultRowWidth = 60;
         }
     }
     
-    // 添加新的 cell
+    // add new cell
     [self buildOriginView:[self getOriginIndexPath:self.contentOffset]];
 }
 

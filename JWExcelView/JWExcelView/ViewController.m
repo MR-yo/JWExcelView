@@ -74,13 +74,13 @@
 // section height, default = 30
 - (CGFloat)jwExcelView:(JWExcelView *)jwExcelView heightForSectionsAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 30;
+    return 44;
 }
 
 // row width, default = 60
 - (CGFloat)jwExcelView:(JWExcelView *)jwExcelView widthOfRowsAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 60;
+    return 70;
 }
 
 #pragma mark - request for data
