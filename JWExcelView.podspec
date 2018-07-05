@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "JWExcelView"
-  s.version      = "0.0.7"
+  s.version      = "0.0.8"
   s.summary      = "Lightweight table view"
   s.description  = <<-DESC
                     if you need show 100x100 item on iPhone, use this.

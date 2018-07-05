@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  UICollectionViewDemoViewController.h
 //  JWExcelView
 //
 //  Created by 一只皮卡丘 on 2018/7/4.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface UICollectionViewDemoViewController : UIViewController
 
 @end

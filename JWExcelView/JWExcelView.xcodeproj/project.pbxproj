@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A38E22720ECD2B400533F33 /* JWExcelViewDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A38E22620ECD2B400533F33 /* JWExcelViewDemoViewController.m */; };
+		1A38E22A20ECD2CC00533F33 /* UICollectionViewDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A38E22920ECD2CC00533F33 /* UICollectionViewDemoViewController.m */; };
+		1A38E22D20ECD52600533F33 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A38E22C20ECD52600533F33 /* ViewController.m */; };
 		1A9F294220E36A6F00708E78 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9F294120E36A6F00708E78 /* AppDelegate.m */; };
-		1A9F294520E36A6F00708E78 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9F294420E36A6F00708E78 /* ViewController.m */; };
 		1A9F294820E36A6F00708E78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A9F294620E36A6F00708E78 /* Main.storyboard */; };
 		1A9F294A20E36A7000708E78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A9F294920E36A7000708E78 /* Assets.xcassets */; };
 		1A9F294D20E36A7000708E78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A9F294B20E36A7000708E78 /* LaunchScreen.storyboard */; };
@@ -38,11 +40,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A38E22520ECD2B400533F33 /* JWExcelViewDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWExcelViewDemoViewController.h; sourceTree = "<group>"; };
+		1A38E22620ECD2B400533F33 /* JWExcelViewDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWExcelViewDemoViewController.m; sourceTree = "<group>"; };
+		1A38E22820ECD2CC00533F33 /* UICollectionViewDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICollectionViewDemoViewController.h; sourceTree = "<group>"; };
+		1A38E22920ECD2CC00533F33 /* UICollectionViewDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICollectionViewDemoViewController.m; sourceTree = "<group>"; };
+		1A38E22B20ECD52600533F33 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1A38E22C20ECD52600533F33 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1A9F293D20E36A6F00708E78 /* JWExcelView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWExcelView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A9F294020E36A6F00708E78 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1A9F294120E36A6F00708E78 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1A9F294320E36A6F00708E78 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1A9F294420E36A6F00708E78 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1A9F294720E36A6F00708E78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1A9F294920E36A7000708E78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A9F294C20E36A7000708E78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -113,8 +119,12 @@
 				1A9F297220E36ABB00708E78 /* JWExcelView */,
 				1A9F294020E36A6F00708E78 /* AppDelegate.h */,
 				1A9F294120E36A6F00708E78 /* AppDelegate.m */,
-				1A9F294320E36A6F00708E78 /* ViewController.h */,
-				1A9F294420E36A6F00708E78 /* ViewController.m */,
+				1A38E22B20ECD52600533F33 /* ViewController.h */,
+				1A38E22C20ECD52600533F33 /* ViewController.m */,
+				1A38E22520ECD2B400533F33 /* JWExcelViewDemoViewController.h */,
+				1A38E22620ECD2B400533F33 /* JWExcelViewDemoViewController.m */,
+				1A38E22820ECD2CC00533F33 /* UICollectionViewDemoViewController.h */,
+				1A38E22920ECD2CC00533F33 /* UICollectionViewDemoViewController.m */,
 				1A9F297920E36B1E00708E78 /* JPFPSStatus.h */,
 				1A9F297A20E36B1E00708E78 /* JPFPSStatus.m */,
 				1A9F294620E36A6F00708E78 /* Main.storyboard */,
@@ -285,12 +295,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A9F294520E36A6F00708E78 /* ViewController.m in Sources */,
+				1A38E22A20ECD2CC00533F33 /* UICollectionViewDemoViewController.m in Sources */,
 				1A9F297720E36ABC00708E78 /* JWExcelView.m in Sources */,
+				1A38E22D20ECD52600533F33 /* ViewController.m in Sources */,
 				1A9F295020E36A7000708E78 /* main.m in Sources */,
 				1A9F294220E36A6F00708E78 /* AppDelegate.m in Sources */,
 				1A9F297820E36ABC00708E78 /* JWExcelCell.m in Sources */,
 				1A9F297B20E36B1E00708E78 /* JPFPSStatus.m in Sources */,
+				1A38E22720ECD2B400533F33 /* JWExcelViewDemoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

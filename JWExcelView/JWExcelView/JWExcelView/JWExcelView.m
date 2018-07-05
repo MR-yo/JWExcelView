@@ -181,8 +181,16 @@ const CGFloat _defaultRowWidth = 60;
 {
     // visibleBounds need bigger than show view, otherwise, the scroll view will show empty.
     // but I let the item width and height control by delegate, get next item width has a little trouble.
-    _nextWidth = _dataSourceDefault.widthOfRowsAtIndexPath ? _defaultRowWidth : [self.excelDataSource jwExcelView:self widthOfRowsAtIndexPath:[self getOriginIndexPath:CGPointMake(self.contentOffset.x + self.bounds.size.width, self.contentOffset.y)]];
-    _nextHeight = _dataSourceDefault.heightForSectionsAtIndexPath ? _defaultSectionHeight : [self.excelDataSource jwExcelView:self heightForSectionsAtIndexPath:[self getOriginIndexPath:CGPointMake(self.contentOffset.x, self.contentOffset.y + self.bounds.size.height)]];
+    // after all, this method will call very frequent
+    // btw, when frame > visible size , don't draw surplus items
+    _nextWidth = 0;
+    _nextHeight = 0;
+    if (self.frame.size.width < self.contentSize.width) {
+        _nextWidth = _dataSourceDefault.widthOfRowsAtIndexPath ? _defaultRowWidth : [self.excelDataSource jwExcelView:self widthOfRowsAtIndexPath:[self getOriginIndexPath:CGPointMake(self.contentOffset.x + self.bounds.size.width, self.contentOffset.y)]];
+    }
+    if (self.frame.size.height < self.contentSize.height) {
+        _nextHeight = _dataSourceDefault.heightForSectionsAtIndexPath ? _defaultSectionHeight : [self.excelDataSource jwExcelView:self heightForSectionsAtIndexPath:[self getOriginIndexPath:CGPointMake(self.contentOffset.x, self.contentOffset.y + self.bounds.size.height)]];
+    }
     
     const CGRect visibleBounds = CGRectMake(self.contentOffset.x,self.contentOffset.y,self.bounds.size.width + _nextWidth,self.bounds.size.height + _nextHeight);
     
@@ -240,7 +248,7 @@ const CGFloat _defaultRowWidth = 60;
     return [NSIndexPath indexPathForRow:row inSection:section];
 }
 
-#pragma mark - 刷新界面
+#pragma mark - reload
 - (void)reloadData
 {
     [self configMainView];

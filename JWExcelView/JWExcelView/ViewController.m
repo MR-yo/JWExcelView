@@ -2,17 +2,22 @@
 //  ViewController.m
 //  JWExcelView
 //
-//  Created by 一只皮卡丘 on 2018/6/22.
+//  Created by 一只皮卡丘 on 2018/7/4.
 //  Copyright © 2018年 一只皮卡丘. All rights reserved.
 //
 
 #import "ViewController.h"
-#import "JWExcelView.h"
+#import "JWExcelViewDemoViewController.h"
+#import "UICollectionViewDemoViewController.h"
 
 #define kScreenWidth   [[UIScreen mainScreen] bounds].size.width
 #define kScreenHeight  [[UIScreen mainScreen] bounds].size.height
 
-@interface ViewController () <JWExcelViewDelegate,JWExcelViewDataSourse>
+@interface ViewController () <UITableViewDelegate,UITableViewDataSource>
+
+@property (nonatomic, strong) UITableView *tableview;
+
+@property (nonatomic, strong) NSArray *dataArray;
 
 @end
 
@@ -27,60 +32,65 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"表格";
+    self.title = @"Demo";
     self.view.backgroundColor = [UIColor whiteColor];
+    _dataArray = @[@"JWExcelView",@"UICollectionView"];
     [self buildMainView];
 }
 
 #pragma mark - buildView
 - (void)buildMainView
 {
-    JWExcelView *excelView = [[JWExcelView alloc] initWithFrame:CGRectMake(0, 64, kScreenWidth, kScreenHeight - 64)];
-    excelView.excelDelegate = self;
-    excelView.excelDataSource = self;
-    [self.view addSubview:excelView];
+    [self buildMainTableView];
 }
 
-- (JWExcelCell *)jwExcelView:(JWExcelView *)jwExcelView jwExcelCellForIndexPath:(NSIndexPath *)indexPath
+- (void)buildMainTableView
 {
-    static NSString *cellId = @"cellId";
-    JWExcelCell *cell = [jwExcelView dequeueReusableCellWithIdentifier:cellId];
-    if (cell == nil) {
-        cell = [[JWExcelCell alloc] initWithIdentifier:cellId];
-        cell.textLabel.font = [UIFont systemFontOfSize:12];
-        cell.textLabel.textAlignment = NSTextAlignmentCenter;
+    if (_tableview == nil) {
+        _tableview = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight - 64) style:UITableViewStylePlain];
+        _tableview.delegate = self;
+        _tableview.dataSource = self;
+        _tableview.estimatedRowHeight = 0;
+        _tableview.tableFooterView = [UIView new];
+        _tableview.backgroundColor = [UIColor clearColor];
+        [self.view addSubview:_tableview];
     }
-    
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld,%ld",indexPath.section,indexPath.row];
-    cell.backgroundColor = [UIColor whiteColor];
-    if (indexPath.section % 2 == 0) {
-        cell.backgroundColor = [UIColor colorWithRed:200/255.0 green:230/255.0 blue:200/255.0 alpha:1.0];
-    }
-    return cell;
 }
 
-// section count, default = 1
-- (NSUInteger)numberOfSectionsInExcelView:(JWExcelView *)jwExcelView
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 50;
+    return _dataArray.count;
 }
 
-// row count, default = 1
-- (NSUInteger)numberOfRowsInExcelView:(JWExcelView *)jwExcelView
-{
-    return 50;
-}
-
-// section height, default = 30
-- (CGFloat)jwExcelView:(JWExcelView *)jwExcelView heightForSectionsAtIndexPath:(NSIndexPath *)indexPath
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 44;
 }
 
-// row width, default = 60
-- (CGFloat)jwExcelView:(JWExcelView *)jwExcelView widthOfRowsAtIndexPath:(NSIndexPath *)indexPath
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 70;
+    static NSString *cellId = @"cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }
+    cell.textLabel.text = _dataArray[indexPath.row];
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row == 0) {
+        JWExcelViewDemoViewController *vc = [JWExcelViewDemoViewController new];
+        vc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.row == 1){
+        UICollectionViewDemoViewController *vc = [UICollectionViewDemoViewController new];
+        vc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 #pragma mark - request for data
@@ -90,10 +100,11 @@
 }
 
 #pragma mark - operation
-- (void)jwExcelView:(JWExcelView *)jwExcelView didSelectItem:(NSIndexPath *)indexPath
+- (void)doSomethings
 {
     
 }
+
 
 
 @end
