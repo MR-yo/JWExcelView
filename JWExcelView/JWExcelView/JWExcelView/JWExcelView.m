@@ -46,6 +46,8 @@ const CGFloat _defaultRowWidth = 60;
         _reusableCells = [[NSMutableSet alloc] init];
         _newVisibleCells = [[NSMutableSet alloc] init];
         _lastContentOffset = CGPointZero;
+        
+        self.panGestureRecognizer.delaysTouchesBegan = YES;
         self.bounces = NO;
     }
     return self;
@@ -107,12 +109,18 @@ const CGFloat _defaultRowWidth = 60;
     // build origin visible cell
     if (_dataSourceDefault.jwExcelCellForIndexPath) {
         
+        if (self.contentSize.width == 0 || self.contentSize.height == 0) {
+            return;
+        }
+        
         NSInteger row = originIndexPath.row;
         NSInteger section = originIndexPath.section;
         CGFloat originW = _lastContentOffset.x;
         CGFloat originH = _lastContentOffset.y;
         CGFloat visibleW = MIN(self.frame.size.width, self.contentSize.width) + originW + _nextWidth;
         CGFloat visibleH = MIN(self.frame.size.height, self.contentSize.height) + originH + _nextHeight;
+        BOOL haveRow = _dataSourceDefault.numberOfRowsInExcelView;
+        BOOL haveSection = _dataSourceDefault.numberOfSectionsInExcelView;
         
         while (originH < visibleH || originW < visibleW) {
             
@@ -140,7 +148,9 @@ const CGFloat _defaultRowWidth = 60;
             }else{
                 if (originH + currentH < visibleH) {
                     originH += currentH;
-                    section ++;
+                    if (haveSection && section < [self.excelDataSource numberOfSectionsInExcelView:self] - 1) {
+                        section ++;
+                    }
                     continue;
                 }else{
                     // restart
@@ -149,7 +159,9 @@ const CGFloat _defaultRowWidth = 60;
                 }
                 if (originW + currentW < visibleW) {
                     originW += currentW;
-                    row ++;
+                    if (haveRow && row < [self.excelDataSource numberOfRowsInExcelView:self] - 1) {
+                        row ++;
+                    }
                     continue;
                 }else{
                     // restart
@@ -157,7 +169,6 @@ const CGFloat _defaultRowWidth = 60;
                     originW = _lastContentOffset.x;
                 }
             }
-            
         }
     }
 }
@@ -192,7 +203,9 @@ const CGFloat _defaultRowWidth = 60;
         _nextHeight = _dataSourceDefault.heightForSectionsAtIndexPath ? _defaultSectionHeight : [self.excelDataSource jwExcelView:self heightForSectionsAtIndexPath:[self getOriginIndexPath:CGPointMake(self.contentOffset.x, self.contentOffset.y + self.bounds.size.height)]];
     }
     
-    const CGRect visibleBounds = CGRectMake(self.contentOffset.x,self.contentOffset.y,self.bounds.size.width + _nextWidth,self.bounds.size.height + _nextHeight);
+    CGFloat visibleW = MIN(self.frame.size.width, self.contentSize.width) + _nextWidth;
+    CGFloat visibleH = MIN(self.frame.size.height, self.contentSize.height) + _nextHeight;
+    const CGRect visibleBounds = CGRectMake(self.contentOffset.x,self.contentOffset.y,visibleW,visibleH);
     
     // remove cell whitch out of visibleBounds from superview, and put it to _reusableCells if it has reuseIdentifier
     for (JWExcelCell *cell in _cachedCells.allValues) {
@@ -251,6 +264,7 @@ const CGFloat _defaultRowWidth = 60;
 #pragma mark - reload
 - (void)reloadData
 {
+    [_cachedCells removeAllObjects];
     [self configMainView];
     [self _setNeedsReload];
 }
